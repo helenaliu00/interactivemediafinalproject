@@ -18,16 +18,19 @@ function preload() {
 }
 
 function setup() {
+
+  // Create a canvas element with the same dimensions as the video
+  canvas = createCanvas(800, 600);
+  canvas.id("canvas");
+
   // Create a video capture element
   video = createCapture(VIDEO);
   video.id("video");
+  // video.hide();
 
   // Set the size of the video element to match the window dimensions
-  video.size(windowWidth, windowHeight);
+  video.size(800, 600);
 
-  // Create a canvas element with the same dimensions as the video
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.id("canvas");
 
   // Position the canvas and video elements
   let x = (windowWidth - width) / 2;
@@ -58,17 +61,24 @@ function modelReady() {
 
   // Update status message
   select('#status').html('Model Loaded');
+
 }
 
 
 function draw() {
   clear();
 
+  // push();
+  // imageMode(CORNER);
+  // image(video, 0, 0, width, auto);
+  // pop();
+
   // Display the images at the center of the hand if detection is in progress
   if (detections.length > 0) {
     let hand = detections[0].landmarks;
     let centerX = hand[9][0]; // X-coordinate of the wrist
     let centerY = hand[9][1]; // Y-coordinate of the wrist
+    console.log(centerX, centerY)
 
     imageMode(CENTER);
     if (isThumbsUp(hand)) {
