@@ -1,0 +1,49 @@
+
+h1 {color: black;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-style: normal;
+  
+}
+
+p {color: black;
+  font-family: "Oswald";
+  font-weight: 100;
+  font-style: normal;
+  
+}
+
+body {
+    background-color: white;
+    font-family: "Oswald";
+  }
+  
+  #canvas{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:1;
+  }
+  
+  #video{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:-1;
+    border: 3px #fff solid;
+      border-radius: 10px;
+  }
+
+  #title{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index:2;}
+
+  #status{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index:2;}
+
+  
