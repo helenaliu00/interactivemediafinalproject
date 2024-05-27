@@ -20,7 +20,7 @@ function preload() {
 function setup() {
 
   // Create a canvas element with the same dimensions as the video
-  canvas = createCanvas(800, 600);
+  canvas = createCanvas(650, 500);
   canvas.id("canvas");
 
   // Create a video capture element
@@ -29,7 +29,7 @@ function setup() {
   // video.hide();
 
   // Set the size of the video element to match the window dimensions
-  video.size(800, 600);
+  video.size(650, 500);
 
 
   // Position the canvas and video elements

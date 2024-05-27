@@ -36,8 +36,9 @@ body {
 
   #title{
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 5px;
+    right: 45vw;
+    text-align: center;
     z-index:2;}
 
   #status{
@@ -45,5 +46,70 @@ body {
     top: 80px;
     right: 20px;
     z-index:2;}
+ 
+    /*RIGHT COLUMN*/
+    .container {
+      position: fixed;
+      top: 82px; /* Adjust as needed */
+      right: 10px; /* Adjust as needed */
+      bottom: 0;
+      width: 24%; /* Adjust the width of the column */
+      background-color: #3498db; /* Blue color for the column */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .centered-column {
+      flex-grow: 1; /* Allow the content to grow to fill available space vertically */
+    }
+    
+    .item {
+      display: flex;
+      align-items: center;
+    }
+    
+    
+    .item .text {
+      padding: 20px;
+      color: #fff; /* Text color */
+    }
+    
+    .centered-column img {
+      max-height: 50px; /* Set maximum height for the images */
+      width: auto; /* Let the width adjust automatically to maintain aspect ratio */
+    }
+    
 
+/*BUTTON*/
+
+.button-column {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  flex-direction: column; /* Align buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+}
+
+button {
+  margin-bottom: 10px; /* Add margin between buttons */
+  padding: 10px 20px; /* Adjust button padding */
+  font-size: 16px; /* Adjust font size */
+  border: none;
+  background-color: #3498db; /* Blue color for buttons */
+  color: #fff; /* Text color */
+  cursor: pointer;
+  width: 200px; /* Set fixed width for all buttons */
+  height: 50px; /* Set fixed height for all buttons */
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue color on hover */
+}
+
+button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+    
   
